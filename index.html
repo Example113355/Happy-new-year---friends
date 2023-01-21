@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy new year!</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="icon" href="https://i1.wp.com/dev.capeandapron.com/wp-content/uploads/2018/06/cropped-favicon_heart-1-1.png?ssl=1" type="image/x-icon"/>
+    <link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css">
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <ul class = "nav-list">
+                <li><a href="fw.html">Firework</a></li>
+                <li class="js-music"><a href="#">Music for tet</a></li>
+            </ul>
+
+            <div class="heart1 heart-icon">
+                <span style='font-size:20px;'>&#128151;</span>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="cat js-cat">
+                <img src="./cat.png" alt="">
+            </div>
+            <div class="container-content js-container-content">
+                <div class="header">
+                    <h3>HAPPY NEW YEAR!!!!</h3>
+                </div>
+                <div class="content">
+                    <div class="wishes">
+                        <p class="wishes-content">Nhân dịp năm mới, chúc bạn ngày ngày vui vẻ, tự do tự tại. Mong rằng bạn luôn tươi cười, những gì bạn muốn đều có thể đạt được.
+                            Tui biết là dạo này đi học nhiều deadline lắm nhưng mà ai cũng vậy mà, tui cũng hông phụ 
+                            bạn chạy deadline được nhưng mà bạn cố lên nha. Chúc bạn năm mới vui vẻ và tràn đầy hạnh phúc.
+                        </p>
+                    </div>
+                    <div class="heart">
+                        <span style='font-size:150px;'>&#128184;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="copyright">Made by <a href="https://www.facebook.com/profile.php?id=100010939488930" class="">THDS</a></p>
+        </div>
+    </div>
+
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+    
+            <header class="modal-header">
+                <i class="modal-heading-icon ti-music-alt"></i>
+                Music
+            </header>
+
+            <div class="modal-body">
+                <ul class="music-list">
+                    <li class="music-item">
+                        <span class="music-title">ABBA - Happy new year</span>
+                        <audio controls><source src = "happy%20new%20year.mp3" type="audio/mpeg"></audio>
+                    </li>
+                    <li class="music-item">
+                        <span class="music-title">Merry Christmas and Happy New Year</span>
+                        <audio controls><source src = "list1 - english.mp3" type="audio/mpeg"></audio>
+                    </li>
+                    <li class="music-item">
+                        <span class="music-title">Playlist nhạc Xuân - list 1</span>
+                        <audio controls><source src = "list2 - vn.mp3" type="audio/mpeg"></audio>
+                    </li>
+                    <li class="music-item">
+                        <span class="music-title">Playlist nhạc Xuân - list 2</span>
+                        <audio controls><source src = "list3 - vn.mp3" type="audio/mpeg"></audio>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- open music -->
+    <script>
+        var modal = document.querySelector('.js-modal');
+        var music = document.querySelector('.js-music');
+        var modalClose = document.querySelector('.js-modal-close')
+        var modalContainer = document.querySelector('.js-modal-container')
+
+        function show() {
+            modal.classList.add('open') 
+        }
+        function hide() {
+            modal.classList.remove('open')
+        }
+
+        music.addEventListener('click', show)
+
+        modalClose.addEventListener('click', hide)
+
+        modal.addEventListener('click', hide)
+
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+    </script>
+    <!-- open cat -->
+    <script>
+        var cat = document.querySelector('.js-cat');
+        var container = document.querySelector('.js-container-content')
+        function animation() {
+            cat.classList.add('move');
+            container.classList.add('show')
+        }
+        cat.addEventListener('click', animation)
+    </script>
+</body>
+</html>
